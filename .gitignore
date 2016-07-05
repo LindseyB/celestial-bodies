@@ -27,3 +27,7 @@ sysinfo.txt
 
 # God damn OS X
 .DS_Store
+
+# Fucking Windows
+Thumbs.db
+Thumbs.db.meta
