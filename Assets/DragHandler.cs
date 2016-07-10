@@ -23,8 +23,8 @@ public class DragHandler : MonoBehaviour {
         Vector3 startLinePosition = gameObject.GetComponent<Transform>().position;
         startLinePosition.z = 1;
 
-        force = new Vector2(endLinePosition.x, endLinePosition.y);
-        force *= (Vector3.Distance(startLinePosition, endLinePosition) * mult);
+        force = new Vector2(endLinePosition.x - startLinePosition.x, endLinePosition.y - startLinePosition.y);
+        force *= (Vector3.Distance(startLinePosition, endLinePosition) * mult * rb.mass);
 
         lr.SetPosition(0, startLinePosition);
         lr.SetPosition(1, endLinePosition);
